@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>{{ flatpage.title }}</title>
-</head>
-<body>
-    <h2>{{ flatpage.title }}</h2>
+{% extends 'flatpages/default.html' %}
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+{% block content %}
+    <h3>{{ flatpage.title }}</h3>
     <hr>
     <h3>Лица, уполномоченные передавать информацию начальнику 2 отделения:</h3>
     {{ flatpage.content }}
@@ -12,5 +11,4 @@
     <br>
     <p>И ещё раз:</p>
     {{ flatpage.content }}
-</body>
-</html>
+{% endblock content %}
